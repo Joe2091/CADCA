@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Router, Routes, and Route
+import HomePage from './HomePage';
+import RecordsPage from './RecordsPage'; // Assuming your RecordsPage is in the pages folder
+import UserForm from './components/UserForm'; // Your UserForm component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React and testing
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} /> {/* Route for HomePage */}
+        <Route path="/records" element={<RecordsPage />} /> {/* Route for RecordsPage */}
+      </Routes>
+
+      {/* User Form can be a separate page or a component displayed within your pages */}
+      <div style={{ marginTop: '2rem' }}>
+        <h1>Users</h1>
+        <UserForm />
+      </div>
+    </Router>
   );
 }
 

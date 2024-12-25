@@ -17,7 +17,15 @@ module InfoManagement
     config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
-    #
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins "http://localhost:3001" # Replace with your React app's URL
+        resource "*",
+                 headers: :any,
+                 methods: [ :get, :post, :patch, :put, :delete, :options ]
+      end
+    end
+
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
