@@ -1,24 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Router, Routes, and Route
-import HomePage from './HomePage';
-import RecordsPage from './RecordsPage'; // Assuming your RecordsPage is in the pages folder
-import UserForm from './components/UserForm'; // Your UserForm component
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AddBookPage from "./pages/AddBookPage";
+import Navbar from "./components/Navbar"; // Import the Navbar component
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} /> {/* Route for HomePage */}
-        <Route path="/records" element={<RecordsPage />} /> {/* Route for RecordsPage */}
-      </Routes>
-
-      {/* User Form can be a separate page or a component displayed within your pages */}
-      <div style={{ marginTop: '2rem' }}>
-        <h1>Users</h1>
-        <UserForm />
+      <Navbar /> {/* Add the Navbar at the top */}
+      <div className="container mt-3">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/add" element={<AddBookPage />} />
+        </Routes>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

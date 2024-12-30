@@ -3,17 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-syntax-flow": "^7.26.0",
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.3.0",
+    "@popperjs/core": "^2.11.8",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "axios": "^1.7.9",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
+    "typescript": "^5.7.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -28,6 +38,11 @@
       "react-app/jest"
     ]
   },
+  "resolutions": {
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -41,6 +56,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
   }
 }
