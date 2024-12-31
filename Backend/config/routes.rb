@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :books
+  resources :books, only: [ :index, :show, :create, :update, :destroy ] do
+    member do
+      patch :toggle # Adds a route for PATCH /books/:id/toggle
+    end
+  end
+
   resources :users
   resources :records
 
