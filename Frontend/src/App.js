@@ -4,13 +4,12 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AddBookPage from "./pages/AddBookPage";
-import EditBookPage from "./pages/EditBookPage"; // Import EditBookPage
-import Navbar from "./components/Navbar"; // Import Navbar
+import EditBookPage from "./pages/EditBookPage"; 
+import Navbar from "./components/Navbar"; 
 
 const App = () => {
   return (
     <Router>
-      {/* Render Navbar at the top */}
       <Navbar />
       <div className="container mt-4">
         <Routes>

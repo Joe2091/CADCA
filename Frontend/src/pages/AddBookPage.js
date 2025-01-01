@@ -33,7 +33,7 @@ const AddBookPage = () => {
       .post("/books", book)
       .then(() => {
         toast.success("Book added successfully!");
-        setTimeout(() => navigate("/"), 2000); // Redirect after 2 seconds
+        setTimeout(() => navigate("/"), 2000); 
       })
       .catch((error) => {
         console.error("Error adding book:", error);

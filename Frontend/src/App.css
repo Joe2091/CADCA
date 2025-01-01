@@ -111,9 +111,9 @@ a:hover {
   background-color: var(--card-bg);
   color: var(--card-text);
   border: none;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -126,12 +126,26 @@ a:hover {
 
 .card-body {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body .display-4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
 }
 
 .card-footer {
   background-color: var(--navbar-bg);
   padding: 10px 20px;
   text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 /* Table Styles */
@@ -142,7 +156,8 @@ a:hover {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   padding: 12px 15px;
   text-align: left;
 }
@@ -171,7 +186,8 @@ a:hover {
 }
 
 /* Input and Search Bar */
-input[type="text"], .form-control {
+input[type="text"],
+.form-control {
   border: 1px solid var(--btn-text);
   padding: 10px;
   border-radius: 5px;
@@ -179,7 +195,8 @@ input[type="text"], .form-control {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-input[type="text"]:focus, .form-control:focus {
+input[type="text"]:focus,
+.form-control:focus {
   outline: none;
   border-color: var(--link-color);
   background-color: var(--card-bg);
@@ -215,5 +232,9 @@ footer {
   .btn {
     font-size: 1rem;
     padding: 8px 15px;
+  }
+
+  .card-body .display-4 {
+    font-size: 2rem;
   }
 }

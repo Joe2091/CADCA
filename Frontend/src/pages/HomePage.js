@@ -48,35 +48,52 @@ const HomePage = () => {
     }
   };
 
-  // Filter books based on search query
+  
   const filteredBooks = books.filter((book) =>
     book.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  
+  const availableCount = books.filter((book) => book.available).length;
+  const borrowedCount = books.length - availableCount;
+
   return (
     <div>
-      {/* Hero Section */}
       <div
-  className="text-center py-5"
-  style={{
-    backgroundColor: "#007bff", // Replace with your desired color
-    color: "white",
-  }}
->
-  <h1 className="fw-bold">Library Management System</h1>
-  <p className="fs-5">Your digital library, simplified and efficient.</p>
-  <Link to="/add" className="btn btn-light btn-lg mt-3">
-    Add New Book
-  </Link>
-</div>
+        className="text-center py-5"
+        style={{
+          backgroundColor: "#212529",
+          color: "white",
+        }}
+      >
+        <h1 className="fw-bold">Online Library</h1>
+        <p className="fs-5">Books at the touch of a button.</p>
+        <Link to="/add" className="btn btn-light btn-lg mt-3">
+          Add New Book
+        </Link>
+      </div>
 
+      <div className="container my-4">
+        <div className="row text-center">
+          <div className="col-md-6 mb-3">
+            <div className="card bg-success text-white shadow">
+              <div className="card-body">
+                <h5 className="card-title">Available Books</h5>
+                <p className="display-4">{availableCount}</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6 mb-3">
+            <div className="card bg-danger text-white shadow">
+              <div className="card-body">
+                <h5 className="card-title">Borrowed Books</h5>
+                <p className="display-4">{borrowedCount}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      {/* Quote Section */}
-      <p className="text-center mt-3 fst-italic">
-        "A room without books is like a body without a soul." – Cicero
-      </p>
-
-      {/* Search Bar */}
       <div className="container my-4">
         <input
           type="text"
@@ -87,7 +104,6 @@ const HomePage = () => {
         />
       </div>
 
-      {/* Main Content */}
       <div className="container mt-5">
         {filteredBooks.length > 0 ? (
           <div className="card shadow">
@@ -100,7 +116,6 @@ const HomePage = () => {
                   <thead className="table-dark">
                     <tr>
                       <th>#</th>
-                      <th>Cover</th>
                       <th>
                         <i className="bi bi-book-fill me-2"></i> Title
                       </th>
@@ -119,17 +134,6 @@ const HomePage = () => {
                     {filteredBooks.map((book, index) => (
                       <tr key={book.id}>
                         <td>{index + 1}</td>
-                        <td>
-                          <img
-                            src={book.coverUrl || "https://via.placeholder.com/50x75?text=No+Cover"}
-                            alt={book.title}
-                            style={{
-                              width: "50px",
-                              height: "75px",
-                              objectFit: "cover",
-                            }}
-                          />
-                        </td>
                         <td>{book.title}</td>
                         <td>{book.author}</td>
                         <td>
@@ -191,7 +195,6 @@ const HomePage = () => {
         )}
       </div>
 
-      {/* Toast Notifications */}
       <ToastContainer />
     </div>
   );
