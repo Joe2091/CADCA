@@ -8,8 +8,8 @@ import EditBookPage from "./pages/EditBookPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import Navbar from "./components/Navbar";
-import PrivateRoute from "./components/PrivateRoute"; // Protect routes
-import { AuthProvider } from "./context/AuthContext"; // AuthProvider
+import PrivateRoute from "./components/PrivateRoute";
+import { AuthProvider } from "./context/AuthContext";
 
 const App = () => {
   return (
@@ -18,11 +18,10 @@ const App = () => {
         <Navbar />
         <div className="container mt-4">
           <Routes>
-            {/* Public Routes */}
+            
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
 
-            {/* Protected Routes */}
             <Route
               path="/"
               element={
