@@ -13,5 +13,14 @@ Book.create([
   { title: "The Odyssey", author: "Homer", available: true },
   { title: "Wuthering Heights", author: "Emily Brontë", available: false },
   { title: "Frankenstein", author: "Mary Shelley", available: true },
-  { title: "The Divine Comedy", author: "Dante Alighieri", available: true }
+  { title: "The Girl with the Dragon Tattoo", author: "Stieg Larsson", available: true },
+  { title: "A Little Life", author: "Hanya Yanagihara", available: true },
+  { title: "The Tipping Point", author: "Malcolm Gladwell", available: true },
+  { title: "Darkmans", author: "Nicola Barker", available: true },
+  { title: "The Siege", author: "Helen Dunmore", available: true },
+  { title: "Light", author: "M John Harrison", available: true },
+  { title: "Bad Blood", author: "Lorna Sage", available: true },
+  { title: "Adults in the Room", author: "Yanis Varoufakis", available: true },
+  { title: "The Cost of Living", author: "Deborah Levy", available: true },
+  { title: "Coraline", author: "Neil Gaiman", available: true }
 ])
