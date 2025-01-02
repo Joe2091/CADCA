@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const HomePage = () => {
   const [books, setBooks] = useState([]);
-  const [searchQuery, setSearchQuery] = useState(""); // Search state
+  const [searchQuery, setSearchQuery] = useState(""); 
 
   useEffect(() => {
     axios
