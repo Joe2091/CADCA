@@ -19,7 +19,7 @@ module InfoManagement
     # Configuration for the application, engines, and railties goes here.
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins "http://localhost:3001" # Replace with your React app's URL
+        origins "*" # Replace with your React app's URL
         resource "*",
                  headers: :any,
                  methods: [ :get, :post, :patch, :put, :delete, :options ]
