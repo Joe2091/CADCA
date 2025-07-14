@@ -1,3 +1,1 @@
-"# InfoManager" 
-"# InfoManager" 
-"# CADCA" 
+This is a Full stack library management web application using React + Bootstrap frontend, Ruby on rails backend. Users can create accounts, login, add books, delete books edit books, and mark books as available or borrowed.
